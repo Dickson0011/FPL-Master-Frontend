@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-fetch(`${API_BASE_URL}/api/bootstrap`);
+// fetch(`${API_BASE_URL}/api/bootstrap`);
 // Create axios instance with default configuration
 const fplApiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -11,7 +11,7 @@ const fplApiClient = axios.create({
     'Content-Type': 'application/json',
   }
 });
-
+console.log("FPL API Base URL:", API_BASE_URL);
 // Cache for bootstrap data to avoid repeated API calls
 let bootstrapCache = null;
 let cacheTimestamp = null;
@@ -21,7 +21,7 @@ const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
 fplApiClient.interceptors.request.use(
   (config) => {
     if (import.meta.env.DEV) {
-      // console.log(`FPL API Request: ${config.method?.toUpperCase()} ${config.url}`);
+      console.log(`FPL API Request: ${config.method?.toUpperCase()} ${config.url}`);
     }
     return config;
   },
