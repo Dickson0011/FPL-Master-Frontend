@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
+fetch(`${API_BASE_URL}/api/bootstrap`);
 // Create axios instance with default configuration
 const fplApiClient = axios.create({
   baseURL: API_BASE_URL,
