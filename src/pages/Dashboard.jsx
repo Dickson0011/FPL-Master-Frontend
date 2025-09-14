@@ -53,7 +53,10 @@ const Dashboard = () => {
         setError(null);
 
         const [bootstrapData, gameweekData] = await Promise.all([
-          fetchBootstrapData(),
+          fetchBootstrapData({
+            useStaleWhileRevalidate: true,
+            onprogress: (msg) => console.log('Bootstrap progress:', msg)
+          }),
           fetchCurrentGameweek()
         ]);
 
