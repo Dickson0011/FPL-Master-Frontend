@@ -265,25 +265,6 @@ const Home = () => {
           </div>
         </section>
       )}
-
-      {/* Error State */}
-      {error && (
-        <section className="section-spacing">
-          <div className="content-max-width container-padding">
-            <div className="text-center">
-              <div className="alert alert-error max-w-md mx-auto">
-                <p>{error}</p>
-                <button 
-                  onClick={loadHomeData}
-                  className="mt-2 text-sm underline hover:no-underline"
-                >
-                  Try again
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 };
