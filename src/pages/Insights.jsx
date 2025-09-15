@@ -197,8 +197,8 @@ const Insights = () => {
   const insightTabs = [
     { id: 'market', label: 'Market Analysis', icon: TrendingUp, color: 'bg-blue-500' },
     { id: 'matrix', label: 'Form vs Ownership', icon: BarChart3, color: 'bg-purple-500' },
-    { id: 'value', label: 'Value Analysis', icon: PieChart, color: 'bg-green-500' },
-    { id: 'risk', label: 'Risk Assessment', icon: Shield, color: 'bg-yellow-500' },
+    // { id: 'value', label: 'Value Analysis', icon: PieChart, color: 'bg-green-500' },
+    // { id: 'risk', label: 'Risk Assessment', icon: Shield, color: 'bg-yellow-500' },
     { id: 'positions', label: 'Position Intel', icon: Users, color: 'bg-indigo-500' },
     { id: 'ai', label: 'AI Recommendations', icon: Brain, color: 'bg-pink-500' }
   ];
@@ -484,7 +484,7 @@ const Insights = () => {
               </div>
             )}
 
-            {selectedInsight === 'value' && (
+            {/* {selectedInsight === 'value' && (
               <div className="space-y-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
@@ -530,9 +530,9 @@ const Insights = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
 
-            {selectedInsight === 'risk' && (
+            {/* {selectedInsight === 'risk' && (
               <div className="space-y-8">
                 <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
                   <div className="flex items-center space-x-3 mb-6">
@@ -572,7 +572,7 @@ const Insights = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
 
             {selectedInsight === 'positions' && (
               <div className="space-y-8">
