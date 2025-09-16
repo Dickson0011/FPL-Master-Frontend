@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import Players from './pages/Player';
 import Insights from './pages/Insights';
 import './styles/global.css';
+import Fixtures from './pages/Fixtures';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -101,6 +102,14 @@ const AppRoutes = () => {
                 <Players />
               </ProtectedRoute>
             } 
+          />
+          <Route
+            path="/fixtures"
+            element={
+              <ProtectedRoute>
+                <Fixtures />
+              </ProtectedRoute>
+            }
           />
 
           {/* Catch all - redirect to home */}
