@@ -74,7 +74,7 @@ class ConfigManager {
       return this.config;
 
     } catch (error) {
-      console.error('Failed to fetch FPL configuration:', error);
+      // console.error('Failed to fetch FPL configuration:', error);
       
       // Try to use cached data even if expired
       const cachedConfig = this.getCachedConfig();
