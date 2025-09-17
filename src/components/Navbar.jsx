@@ -59,7 +59,7 @@ const Navbar = () => {
                 {APP_CONFIG.name}
               </span>
               <span className="font-display font-bold text-lg sm:hidden">
-                FPL AI
+                FPL Master
               </span>
             </Link>
           </div>

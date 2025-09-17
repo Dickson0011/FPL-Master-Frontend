@@ -200,7 +200,7 @@ const Insights = () => {
     // { id: 'value', label: 'Value Analysis', icon: PieChart, color: 'bg-green-500' },
     // { id: 'risk', label: 'Risk Assessment', icon: Shield, color: 'bg-yellow-500' },
     { id: 'positions', label: 'Position Intel', icon: Users, color: 'bg-indigo-500' },
-    { id: 'ai', label: 'AI Recommendations', icon: Brain, color: 'bg-pink-500' }
+    { id: 'ai', label: 'Recommendations', icon: Brain, color: 'bg-pink-500' }
   ];
 
   const StatCard = ({ title, value, trend, icon: Icon, color = 'text-blue-600' }) => (
