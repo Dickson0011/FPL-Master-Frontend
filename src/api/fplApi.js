@@ -12,7 +12,7 @@ const fplApiClient = axios.create({
   }
 });
 
-console.log("FPL API Base URL:", API_BASE_URL);
+// console.log("FPL API Base URL:", API_BASE_URL);
 
 // Cache for bootstrap data
 let bootstrapCache = null;
@@ -23,7 +23,7 @@ const CACHE_DURATION = 15 * 60 * 1000; // 15 minutes
 fplApiClient.interceptors.request.use(
   (config) => {
     if (import.meta.env.DEV) {
-      console.log(`FPL API Request: ${config.method?.toUpperCase()} ${config.url}`);
+      // console.log(`FPL API Request: ${config.method?.toUpperCase()} ${config.url}`);
     }
     
     // Add timestamp for request tracking
@@ -42,7 +42,7 @@ fplApiClient.interceptors.response.use(
     // Log response time in development
     if (import.meta.env.DEV && response.config.metadata) {
       const duration = Date.now() - response.config.metadata.startTime;
-      console.log(`FPL API Response: ${response.status} (${duration}ms)`);
+      // console.log(`FPL API Response: ${response.status} (${duration}ms)`);
     }
     return response;
   },
@@ -89,7 +89,7 @@ export const fetchBootstrapData = async (options = {}) => {
     // Return fresh cache if available and not forcing refresh
     if (!forceRefresh && bootstrapCache && cacheTimestamp && 
         (Date.now() - cacheTimestamp < CACHE_DURATION)) {
-      console.log('Using cached bootstrap data');
+      // console.log('Using cached bootstrap data');
       return bootstrapCache;
     }
 
@@ -101,7 +101,7 @@ export const fetchBootstrapData = async (options = {}) => {
           .catch(err => console.log('Background refresh failed:', err.message));
       }, 100);
       
-      console.log('Using stale cache while revalidating');
+      // console.log('Using stale cache while revalidating');
       return bootstrapCache;
     }
 
@@ -134,7 +134,7 @@ export const fetchBootstrapData = async (options = {}) => {
     
     // If we have any cached data, return it as fallback
     if (bootstrapCache) {
-      console.log('Using fallback cache due to error');
+      // console.log('Using fallback cache due to error');
       if (onProgress) {
         onProgress('Using cached data (FPL API temporarily slow)');
       }
