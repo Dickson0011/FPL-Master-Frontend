@@ -70,7 +70,7 @@ class ConfigManager {
         timestamp: this.lastFetch.toISOString(),
       });
 
-      console.log('FPL configuration loaded successfully');
+      // console.log('FPL configuration loaded successfully');
       return this.config;
 
     } catch (error) {
