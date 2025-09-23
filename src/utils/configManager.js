@@ -51,7 +51,7 @@ class ConfigManager {
     this.isLoading = true;
 
     try {
-      console.log('Fetching fresh FPL configuration...');
+      // console.log('Fetching fresh FPL configuration...');
       const dynamicConfig = await fetchDynamicConfig();
       
       // Enhance teams with colors
